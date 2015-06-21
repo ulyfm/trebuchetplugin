@@ -14,6 +14,6 @@ commands:
     permission: trebuchetmod.trbdestroy
     usage: /trbdestroy
   dumpdata:
-    description: DATA
+    description: Dump data
     permission: trebuchetmod.data
-    usage: /data
+    usage: /dumpdata

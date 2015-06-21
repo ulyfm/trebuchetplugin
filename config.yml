@@ -1,11 +1,42 @@
+#TrebuchetMod default config
+
+#The path of the save file for trebuchets
+#  It is recommended that you set this file to be inside the TrebuchetMod config folder in plugins/
 savepath: plugins/TrebuchetMod/trbcfg.cfg
+
+#The power of the trebuchet
+#  When you launch a trebuchet, the x and z values represent horizontal force and
+#  vertical force, respectively. The force is equal to sqrt( x^2 + z^2 ). Basically, a
+#  higher force will lead to increased launch distance.
 trebuchetpower: 6
+
+#The number of ticks before the trebuchet reloads
+#  I think 24 ticks = 1 second.
 reloadticks: 720
-partialreloadticks: 200
+
+#The number of ticks the trebuchet is in the middle reloading state
+partialreloadticks: 34
+
+#The up/down angle all trebuchets are set to by default
 defaultudangle: 45
+
+#The left/right angle all trebuchets are set to by default
 defaultlrangle: 0
+
+#The minimum left/right angle
 minlrangle: -45
+
+#The maximum left/right angle
 maxlrangle: 45
+
+#The minimum up/down angle
 minudangle: 10
+
+#The maximum up/down angle
 maxudangle: 75
-explosionintensity: 3.1
+
+#The intensity of the explosion
+#  6 will destroy like 4 stone blocks
+#  7 will destroy 16
+#  it’s a slippery slope
+explosionintensity: 7
