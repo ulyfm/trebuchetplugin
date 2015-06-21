@@ -1,0 +1,19 @@
+name: TrebuchetMod
+version: 0.2
+description: Lets you create working trebuchets with commands and signs
+author: zeu06
+website: http://noop.us
+main: us.noop.trb.Trebuchet
+commands:
+  trbcreate:
+    description: Initialize a trebuchet at selected location. Look at a center bedrock block while you are facing the direction it is supposed to go.
+    permission: trebuchetmod.trbcreate
+    usage: /trbcreate
+  trbdestroy:
+    description: Destroys a trebuchet. Look at the up/down sign.
+    permission: trebuchetmod.trbdestroy
+    usage: /trbdestroy
+  dumpdata:
+    description: DATA
+    permission: trebuchetmod.data
+    usage: /data

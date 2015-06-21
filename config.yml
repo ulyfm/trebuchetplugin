@@ -1,0 +1,11 @@
+savepath: plugins/TrebuchetMod/trbcfg.cfg
+trebuchetpower: 6
+reloadticks: 720
+partialreloadticks: 200
+defaultudangle: 45
+defaultlrangle: 0
+minlrangle: -45
+maxlrangle: 45
+minudangle: 10
+maxudangle: 75
+explosionintensity: 3.1

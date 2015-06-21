@@ -58,7 +58,7 @@ public class ModelBuilder {
 		w.getBlockAt(add(p, l, -1, -1, 0)).setTypeIdAndData(Material.WOOD_BUTTON.getId(), (byte) correct(Material.WOOD_BUTTON, p, 1), false);
 		w.getBlockAt(add(p, l, 1, -1, 0)).setTypeIdAndData(Material.WOOD_BUTTON.getId(), (byte) correct(Material.WOOD_BUTTON, p, 4), false);
 		w.getBlockAt(add(p, l, 0, 1, 1)).setTypeIdAndData(Material.SPRUCE_WOOD_STAIRS.getId(), (byte) correct(Material.SPRUCE_WOOD_STAIRS, p, 1), false);
-		w.getBlockAt(add(p, l, 0, 0, 1)).setTypeIdAndData(Material.LOG.getId(), (byte) correct(Material.LOG, p, 5), false);
+		w.getBlockAt(add(p, l, 0, 0, 1)).setTypeIdAndData(Material.LOG_2.getId(), (byte) correct(Material.LOG_2, p, 5), false);
 		w.getBlockAt(add(p, l, 0, -2, -6)).setTypeIdAndData(Material.WOOD_STEP.getId(), (byte) 1, false);
 		w.getBlockAt(add(p, l, 0, -4, 0)).setTypeIdAndData(Material.SPRUCE_WOOD_STAIRS.getId(), (byte) correct(Material.SPRUCE_WOOD_STAIRS, p, 1), false);
 		w.getBlockAt(add(p, l, 1, -2, 0)).setTypeIdAndData(Material.LOG.getId(), (byte) correct(Material.LOG, p, 8), false);
@@ -103,7 +103,7 @@ public class ModelBuilder {
 		w.getBlockAt(add(p, l, 1, 1, 0)).setTypeIdAndData(Material.WOOD_BUTTON.getId(), (byte) correct(Material.WOOD_BUTTON, p, 2), false);
 		w.getBlockAt(add(p, l, -1, 1, 0)).setTypeIdAndData(Material.WOOD_BUTTON.getId(), (byte) correct(Material.WOOD_BUTTON, p, 3), false);
 		w.getBlockAt(add(p, l, 0, -1, 1)).setTypeIdAndData(Material.SPRUCE_WOOD_STAIRS.getId(), (byte) correct(Material.SPRUCE_WOOD_STAIRS, p, 0), false);
-		w.getBlockAt(add(p, l, 0, 0, 1)).setTypeIdAndData(Material.LOG.getId(), (byte) correct(Material.LOG, p, 5), false);
+		w.getBlockAt(add(p, l, 0, 0, 1)).setTypeIdAndData(Material.LOG_2.getId(), (byte) correct(Material.LOG_2, p, 5), false);
 		w.getBlockAt(add(p, l, -1, 0, 0)).setType(Material.LOG);
 		w.getBlockAt(add(p, l, 0, 0, 1)).setType(Material.LOG);
 		w.getBlockAt(add(p, l, 0, 0, 1)).setTypeIdAndData(Material.WOOD_STEP.getId(), (byte) 1, false);
@@ -155,7 +155,7 @@ public class ModelBuilder {
 		w.getBlockAt(add(p, l, 0, -1, 0)).setType(Material.LOG);
 		w.getBlockAt(add(p, l, 0, 0, 1)).setTypeIdAndData(Material.WOOD_STEP.getId(), (byte) 1, false);
 		w.getBlockAt(add(p, l, 0, 1, 0)).setType(Material.LOG);
-		w.getBlockAt(add(p, l, 1, 0, 0)).setTypeIdAndData(Material.LOG.getId(), (byte) correct(Material.LOG, p, 5), false);
+		w.getBlockAt(add(p, l, 1, 0, 0)).setTypeIdAndData(Material.LOG_2.getId(), (byte) correct(Material.LOG_2, p, 5), false);
 		w.getBlockAt(add(p, l, -1, 1, 0)).setTypeIdAndData(Material.SPRUCE_WOOD_STAIRS.getId(), (byte) correct(Material.SPRUCE_WOOD_STAIRS, p, 3), false);
 		w.getBlockAt(add(p, l, 0, -1, 1)).setType(Material.LOG);
 		w.getBlockAt(add(p, l, 0, 0, 1)).setTypeIdAndData(Material.WOOD_STEP.getId(), (byte) 1, false);
@@ -303,7 +303,7 @@ public class ModelBuilder {
 	 * @return - corrected int
 	 */
 	public int correct(Material m, BlockFace b, int s){
-		if(m == Material.LOG){
+		if(m == Material.LOG || m == Material.LOG_2){
 			if(b == BlockFace.EAST || b == BlockFace.WEST){
 				if(s == 4) return 8;
 				if(s == 8) return 4;

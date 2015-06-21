@@ -115,6 +115,7 @@ public class Trebuchet extends JavaPlugin {
 	/**
 	 * Method called on command
 	 */
+	@SuppressWarnings("deprecation")
 	@Override
 	public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
 		try{
@@ -141,6 +142,17 @@ public class Trebuchet extends JavaPlugin {
 			if(b.getType().equals(Material.BEDROCK)){
 				builder.destroy(b, p);
 			}
+			return true;
+		}else if(label.equalsIgnoreCase("dumpdata")){
+			Player p = (Player) sender;
+			if(!p.isOp()) return true;
+			Block b = p.getTargetBlock((Set<Material>) null, 10);
+			if(b == null){
+				p.sendMessage("OUTSIDE OF TREBUCHET BASE BLOCK RANGE");
+				return true;
+			}
+			p.sendMessage(b.getType().name());
+			p.sendMessage("" + b.getData());
 			return true;
 		}
 		return false;
