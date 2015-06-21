@@ -40,6 +40,12 @@ public class ModelBuilder {
 	 */
 	@SuppressWarnings("deprecation")
 	public void construct(Block baseBlock, BlockFace p){
+		try{
+			face2int(p);
+		}catch(Exception e){
+			Bukkit.getServer().broadcastMessage("Invalid location.");
+			return;
+		}
 		MapTrebuchet mp = trb.manager.add(baseBlock.getWorld(), baseBlock.getLocation(), face2int(p));
 		World w = baseBlock.getWorld();
 		Location l = baseBlock.getLocation().clone();
