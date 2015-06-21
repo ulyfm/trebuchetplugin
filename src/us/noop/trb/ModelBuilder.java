@@ -309,6 +309,7 @@ public class ModelBuilder {
 				if(s == 8) return 4;
 				if(s == 5) return 9;
 				if(s == 9) return 5;
+				return s;
 			}else{
 				return s;
 			}
@@ -462,32 +463,30 @@ public class ModelBuilder {
 	public void buildReloading(MapTrebuchet mp, BlockFace p){
 		World w = mp.getBase().getWorld();
 		Location l = mp.getBase().getLocation().clone();
-		w.getBlockAt(add(p, l, 0, -8, 16)).setType(Material.AIR);
+		w.getBlockAt(add(p, l, 0, -8, 7)).setType(Material.AIR);
+		w.getBlockAt(add(p, l, 0, 0, -1)).setType(Material.AIR);
+		w.getBlockAt(add(p, l, 0, 0, -1)).setType(Material.AIR);
+		w.getBlockAt(add(p, l, 0, 1, 0)).setType(Material.AIR);
+		w.getBlockAt(add(p, l, 0, 0, -1)).setType(Material.AIR);
+		w.getBlockAt(add(p, l, 0, 1, 0)).setType(Material.AIR);
+		w.getBlockAt(add(p, l, 0, 0, -2)).setType(Material.AIR);
+		w.getBlockAt(add(p, l, -1, 0, 1)).setType(Material.AIR);
+		w.getBlockAt(add(p, l, 1, 1, 0)).setType(Material.AIR);
+		w.getBlockAt(add(p, l, 1, -1, 0)).setType(Material.AIR);
+		w.getBlockAt(add(p, l, -1, -1, 0)).setType(Material.AIR);
 		w.getBlockAt(add(p, l, 0, 1, 0)).setType(Material.AIR);
 		w.getBlockAt(add(p, l, 0, 1, -1)).setType(Material.AIR);
-		w.getBlockAt(add(p, l, -1, -1, 0)).setType(Material.AIR);
-		w.getBlockAt(add(p, l, 1, -1, 0)).setType(Material.AIR);
-		w.getBlockAt(add(p, l, 1, 1, 0)).setType(Material.AIR);
-		w.getBlockAt(add(p, l, -1, 0, 0)).setType(Material.AIR);
-		w.getBlockAt(add(p, l, 0, 0, -1)).setType(Material.AIR);
-		w.getBlockAt(add(p, l, 0, 1, 0)).setType(Material.AIR);
-		w.getBlockAt(add(p, l, 0, 0, -1)).setType(Material.AIR);
-		w.getBlockAt(add(p, l, 0, 0, -1)).setType(Material.AIR);
+		w.getBlockAt(add(p, l, 0, -2, 5)).setType(Material.AIR);
 		w.getBlockAt(add(p, l, 0, 1, 0)).setType(Material.AIR);
 		w.getBlockAt(add(p, l, 0, 1, 0)).setType(Material.AIR);
-		w.getBlockAt(add(p, l, 0, 0, -1)).setType(Material.AIR);
 		w.getBlockAt(add(p, l, 0, 1, 0)).setType(Material.AIR);
-		w.getBlockAt(add(p, l, 0, 0, -1)).setType(Material.AIR);
 		w.getBlockAt(add(p, l, 0, 1, 0)).setType(Material.AIR);
-		w.getBlockAt(add(p, l, 0, 0, -1)).setType(Material.AIR);
 		w.getBlockAt(add(p, l, 0, 1, 0)).setType(Material.AIR);
-		w.getBlockAt(add(p, l, 0, 0, -1)).setType(Material.AIR);
 		w.getBlockAt(add(p, l, 0, 1, 0)).setType(Material.AIR);
-		w.getBlockAt(add(p, l, 0, 0, -1)).setType(Material.AIR);
 		w.getBlockAt(add(p, l, 0, 1, 0)).setType(Material.AIR);
-		w.getBlockAt(add(p, l, 0, 0, -1)).setType(Material.AIR);
 		w.getBlockAt(add(p, l, 0, 1, 0)).setType(Material.AIR);
-		w.getBlockAt(add(p, l, 0, 0, -1)).setType(Material.AIR);
+		w.getBlockAt(add(p, l, 0, 1, 0)).setType(Material.AIR);
+		w.getBlockAt(add(p, l, 0, 1, 0)).setType(Material.AIR);
 		w.getBlockAt(add(p, l, 0, 1, 0)).setType(Material.AIR);
 		w.getBlockAt(add(p, l, 0, 0, -1)).setType(Material.AIR);
 		w.getBlockAt(add(p, l, 0, 0, -1)).setType(Material.AIR);
@@ -532,6 +531,91 @@ public class ModelBuilder {
 		w.getBlockAt(add(p, l, 0, 0, 1)).setTypeIdAndData(Material.LOG.getId(), (byte) correct(Material.LOG, p, 1), false);
 		w.getBlockAt(add(p, l, 0, 0, 1)).setTypeIdAndData(Material.DARK_OAK_STAIRS.getId(), (byte) correct(Material.DARK_OAK_STAIRS, p, 2), false);
 		w.getBlockAt(add(p, l, 0, 1, -1)).setTypeIdAndData(Material.WOOD.getId(), (byte) 5, false);
+	}
+	
+	/**
+	 * Constructs the middle look of the animation of a trebuchet.
+	 * @param mp
+	 * @param p
+	 */
+	@SuppressWarnings("deprecation")
+	public void buildReloadingMid(MapTrebuchet mp, BlockFace p){
+		World w = mp.getBase().getWorld();
+		Location l = mp.getBase().getLocation().clone();
+		w.getBlockAt(add(p, l, 0, -8, 16)).setType(Material.AIR);
+		w.getBlockAt(add(p, l, 0, 1, 0)).setType(Material.AIR);
+		w.getBlockAt(add(p, l, 0, 1, -1)).setType(Material.AIR);
+		w.getBlockAt(add(p, l, -1, -1, 0)).setType(Material.AIR);
+		w.getBlockAt(add(p, l, 1, -1, 0)).setType(Material.AIR);
+		w.getBlockAt(add(p, l, 1, 1, 0)).setType(Material.AIR);
+		w.getBlockAt(add(p, l, -1, 0, 0)).setType(Material.AIR);
+		w.getBlockAt(add(p, l, 0, 0, -1)).setType(Material.AIR);
+		w.getBlockAt(add(p, l, 0, 1, 0)).setType(Material.AIR);
+		w.getBlockAt(add(p, l, 0, 0, -1)).setType(Material.AIR);
+		w.getBlockAt(add(p, l, 0, 0, -1)).setType(Material.AIR);
+		w.getBlockAt(add(p, l, 0, 1, 0)).setType(Material.AIR);
+		w.getBlockAt(add(p, l, 0, 1, 0)).setType(Material.AIR);
+		w.getBlockAt(add(p, l, 0, 0, -1)).setType(Material.AIR);
+		w.getBlockAt(add(p, l, 0, 1, 0)).setType(Material.AIR);
+		w.getBlockAt(add(p, l, 0, 0, -1)).setType(Material.AIR);
+		w.getBlockAt(add(p, l, 0, 1, 0)).setType(Material.AIR);
+		w.getBlockAt(add(p, l, 0, 0, -1)).setType(Material.AIR);
+		w.getBlockAt(add(p, l, 0, 1, 0)).setType(Material.AIR);
+		w.getBlockAt(add(p, l, 0, 0, -1)).setType(Material.AIR);
+		w.getBlockAt(add(p, l, 0, 1, 0)).setType(Material.AIR);
+		w.getBlockAt(add(p, l, 0, 0, -1)).setType(Material.AIR);
+		w.getBlockAt(add(p, l, 0, 1, 0)).setType(Material.AIR);
+		w.getBlockAt(add(p, l, 0, 0, -1)).setType(Material.AIR);
+		w.getBlockAt(add(p, l, 0, 1, 0)).setType(Material.AIR);
+		w.getBlockAt(add(p, l, 0, 0, -1)).setType(Material.AIR);
+		w.getBlockAt(add(p, l, 0, 1, 0)).setType(Material.AIR);
+		w.getBlockAt(add(p, l, 0, 0, -1)).setType(Material.AIR);
+		w.getBlockAt(add(p, l, 0, 0, -1)).setType(Material.AIR);
+		w.getBlockAt(add(p, l, 0, 1, 0)).setType(Material.AIR);
+		w.getBlockAt(add(p, l, 0, 0, -1)).setType(Material.AIR);
+		w.getBlockAt(add(p, l, 0, 0, -1)).setType(Material.AIR);
+		w.getBlockAt(add(p, l, 0, -1, 0)).setType(Material.AIR);
+		w.getBlockAt(add(p, l, 0, -1, 0)).setType(Material.AIR);
+		w.getBlockAt(add(p, l, 0, 0, 1)).setType(Material.AIR);
+		w.getBlockAt(add(p, l, 0, 0, 1)).setType(Material.AIR);
+		w.getBlockAt(add(p, l, 0, 1, -1)).setType(Material.AIR);
+		l = mp.getBase().getLocation().clone();
+		w.getBlockAt(add(p, l, 0, -8, 7)).setTypeIdAndData(Material.WOOD.getId(), (byte) 5, false);
+		w.getBlockAt(add(p, l, 0, 0, -1)).setType(Material.FENCE);
+		w.getBlockAt(add(p, l, 0, 0, -1)).setType(Material.FENCE);
+		w.getBlockAt(add(p, l, 0, 1, 0)).setType(Material.FENCE);
+		w.getBlockAt(add(p, l, 0, 0, -1)).setType(Material.FENCE);
+		w.getBlockAt(add(p, l, 0, 1, 0)).setType(Material.FENCE);
+		w.getBlockAt(add(p, l, 0, 0, -1)).setType(Material.BARRIER);
+		w.getBlockAt(add(p, l, 0, 1, -1)).setType(Material.BARRIER);
+		w.getBlockAt(add(p, l, 0, -1, 0)).setTypeIdAndData(Material.TRAP_DOOR.getId(), (byte) correct(Material.TRAP_DOOR, p, 8), false);
+		w.getBlockAt(add(p, l, -1, 0, 1)).setTypeIdAndData(Material.TRAP_DOOR.getId(), (byte) correct(Material.TRAP_DOOR, p, 7), false);
+		w.getBlockAt(add(p, l, 1, 1, 0)).setTypeIdAndData(Material.TRAP_DOOR.getId(), (byte) correct(Material.TRAP_DOOR, p, 5), false);
+		w.getBlockAt(add(p, l, 1, -1, 0)).setTypeIdAndData(Material.TRAP_DOOR.getId(), (byte) correct(Material.TRAP_DOOR, p, 6), false);
+		w.getBlockAt(add(p, l, -1, -1, 0)).setTypeIdAndData(Material.TRAP_DOOR.getId(), (byte) correct(Material.TRAP_DOOR, p, 4), false);
+		w.getBlockAt(add(p, l, 0, 0, 4)).setTypeIdAndData(Material.WOOD.getId(), (byte) 5, false);
+		w.getBlockAt(add(p, l, 0, 1, 0)).setTypeIdAndData(Material.WOOD.getId(), (byte) 5, false);
+		w.getBlockAt(add(p, l, 0, 1, 0)).setTypeIdAndData(Material.WOOD.getId(), (byte) 5, false);
+		w.getBlockAt(add(p, l, 0, 1, 0)).setTypeIdAndData(Material.WOOD.getId(), (byte) 5, false);
+		w.getBlockAt(add(p, l, 0, 1, 0)).setTypeIdAndData(Material.WOOD.getId(), (byte) 5, false);
+		w.getBlockAt(add(p, l, 0, 1, 0)).setTypeIdAndData(Material.WOOD.getId(), (byte) 5, false);
+		w.getBlockAt(add(p, l, 0, 1, 0)).setTypeIdAndData(Material.WOOD.getId(), (byte) 5, false);
+		w.getBlockAt(add(p, l, 0, 1, 0)).setTypeIdAndData(Material.WOOD.getId(), (byte) 5, false);
+		w.getBlockAt(add(p, l, 0, 1, 0)).setTypeIdAndData(Material.WOOD.getId(), (byte) 5, false);
+		w.getBlockAt(add(p, l, 0, 1, 0)).setTypeIdAndData(Material.WOOD.getId(), (byte) 5, false);
+		w.getBlockAt(add(p, l, 0, 1, 0)).setTypeIdAndData(Material.WOOD.getId(), (byte) 5, false);
+		w.getBlockAt(add(p, l, 0, 1, 0)).setTypeIdAndData(Material.DARK_OAK_STAIRS.getId(), (byte) correct(Material.DARK_OAK_STAIRS, p, 3), false);
+		w.getBlockAt(add(p, l, 0, 0, -1)).setType(Material.IRON_FENCE);
+		w.getBlockAt(add(p, l, 0, 0, -1)).setTypeIdAndData(Material.LOG.getId(), (byte) correct(Material.LOG, p, 9), false);
+		w.getBlockAt(add(p, l, 0, 1, 0)).setTypeIdAndData(Material.DARK_OAK_STAIRS.getId(), (byte) correct(Material.DARK_OAK_STAIRS, p, 3), false);
+		w.getBlockAt(add(p, l, 0, 0, -1)).setTypeIdAndData(Material.LOG.getId(), (byte) correct(Material.LOG, p, 1), false);
+		w.getBlockAt(add(p, l, 0, 0, -1)).setTypeIdAndData(Material.DARK_OAK_STAIRS.getId(), (byte) correct(Material.DARK_OAK_STAIRS, p, 7), false);
+		w.getBlockAt(add(p, l, 0, -1, 0)).setTypeIdAndData(Material.LOG.getId(), (byte) correct(Material.LOG, p, 9), false);
+		w.getBlockAt(add(p, l, 0, -1, 0)).setTypeIdAndData(Material.DARK_OAK_STAIRS.getId(), (byte) correct(Material.DARK_OAK_STAIRS, p, 6), false);
+		w.getBlockAt(add(p, l, 0, 0, 1)).setTypeIdAndData(Material.LOG.getId(), (byte) correct(Material.LOG, p, 1), false);
+		w.getBlockAt(add(p, l, 0, 0, 1)).setTypeIdAndData(Material.DARK_OAK_STAIRS.getId(), (byte) correct(Material.DARK_OAK_STAIRS, p, 2), false);
+		w.getBlockAt(add(p, l, 0, 1, -1)).setTypeIdAndData(Material.WOOD.getId(), (byte) 5, false);
+		
 	}
 	
 	/**
