@@ -11,7 +11,7 @@ savepath: plugins/TrebuchetMod/trbcfg.cfg
 trebuchetpower: 6
 
 #The number of ticks before the trebuchet reloads
-#  I think 24 ticks = 1 second.
+#  I think 20 ticks = 1 second.
 reloadticks: 720
 
 #The number of ticks the trebuchet is in the middle reloading state

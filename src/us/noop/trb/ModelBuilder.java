@@ -65,8 +65,11 @@ public class ModelBuilder {
 		w.getBlockAt(add(p, l, 1, -1, 0)).setTypeIdAndData(Material.WOOD_BUTTON.getId(), (byte) correct(Material.WOOD_BUTTON, p, 4), false);
 		w.getBlockAt(add(p, l, 0, 1, 1)).setTypeIdAndData(Material.SPRUCE_WOOD_STAIRS.getId(), (byte) correct(Material.SPRUCE_WOOD_STAIRS, p, 1), false);
 		w.getBlockAt(add(p, l, 0, 0, 1)).setTypeIdAndData(Material.LOG_2.getId(), (byte) correct(Material.LOG_2, p, 5), false);
-		w.getBlockAt(add(p, l, 0, -2, -6)).setTypeIdAndData(Material.WOOD_STEP.getId(), (byte) 1, false);
-		w.getBlockAt(add(p, l, 0, -4, 0)).setTypeIdAndData(Material.SPRUCE_WOOD_STAIRS.getId(), (byte) correct(Material.SPRUCE_WOOD_STAIRS, p, 1), false);
+		w.getBlockAt(add(p, l, 0, 2, -6)).setTypeIdAndData(Material.WOOD_STEP.getId(), (byte) 1, false);
+		w.getBlockAt(add(p, l, -1, -1, 0)).setTypeIdAndData(Material.WOOD_STEP.getId(), (byte) 1, false);
+		w.getBlockAt(add(p, l, 0, -2, 0)).setTypeIdAndData(Material.WOOD_STEP.getId(), (byte) 1, false);
+		w.getBlockAt(add(p, l, 1, -1, 0)).setTypeIdAndData(Material.WOOD_STEP.getId(), (byte) 1, false);
+		w.getBlockAt(add(p, l, 0, -4, 0)).setTypeIdAndData(Material.WOOD_STEP.getId(), (byte) 1, false);
 		w.getBlockAt(add(p, l, 1, -2, 0)).setTypeIdAndData(Material.LOG.getId(), (byte) correct(Material.LOG, p, 8), false);
 		w.getBlockAt(add(p, l, 0, 1, 0)).setTypeIdAndData(Material.LOG.getId(), (byte) correct(Material.LOG, p, 8), false);
 		w.getBlockAt(add(p, l, 0, 1, 0)).setTypeIdAndData(Material.LOG.getId(), (byte) correct(Material.LOG, p, 8), false);
@@ -528,13 +531,13 @@ public class ModelBuilder {
 		w.getBlockAt(add(p, l, 0, 0, 1)).setTypeIdAndData(Material.WOOD_STEP.getId(), (byte) 5, false);
 		w.getBlockAt(add(p, l, 0, 1, 0)).setTypeIdAndData(Material.DARK_OAK_STAIRS.getId(), (byte) correct(Material.DARK_OAK_STAIRS, p, 3), false);
 		w.getBlockAt(add(p, l, 0, 0, -1)).setType(Material.IRON_FENCE);
-		w.getBlockAt(add(p, l, 0, 0, -1)).setTypeIdAndData(Material.LOG.getId(), (byte) correct(Material.LOG, p, 9), false);
+		w.getBlockAt(add(p, l, 0, 0, -1)).setTypeIdAndData(Material.LOG_2.getId(), (byte) correct(Material.LOG_2, p, 9), false);
 		w.getBlockAt(add(p, l, 0, 1, 0)).setTypeIdAndData(Material.DARK_OAK_STAIRS.getId(), (byte) correct(Material.DARK_OAK_STAIRS, p, 3), false);
-		w.getBlockAt(add(p, l, 0, 0, -1)).setTypeIdAndData(Material.LOG.getId(), (byte) correct(Material.LOG, p, 1), false);
+		w.getBlockAt(add(p, l, 0, 0, -1)).setTypeIdAndData(Material.LOG_2.getId(), (byte) correct(Material.LOG_2, p, 1), false);
 		w.getBlockAt(add(p, l, 0, 0, -1)).setTypeIdAndData(Material.DARK_OAK_STAIRS.getId(), (byte) correct(Material.DARK_OAK_STAIRS, p, 7), false);
-		w.getBlockAt(add(p, l, 0, -1, 0)).setTypeIdAndData(Material.LOG.getId(), (byte) correct(Material.LOG, p, 9), false);
+		w.getBlockAt(add(p, l, 0, -1, 0)).setTypeIdAndData(Material.LOG_2.getId(), (byte) correct(Material.LOG_2, p, 9), false);
 		w.getBlockAt(add(p, l, 0, -1, 0)).setTypeIdAndData(Material.DARK_OAK_STAIRS.getId(), (byte) correct(Material.DARK_OAK_STAIRS, p, 6), false);
-		w.getBlockAt(add(p, l, 0, 0, 1)).setTypeIdAndData(Material.LOG.getId(), (byte) correct(Material.LOG, p, 1), false);
+		w.getBlockAt(add(p, l, 0, 0, 1)).setTypeIdAndData(Material.LOG_2.getId(), (byte) correct(Material.LOG_2, p, 1), false);
 		w.getBlockAt(add(p, l, 0, 0, 1)).setTypeIdAndData(Material.DARK_OAK_STAIRS.getId(), (byte) correct(Material.DARK_OAK_STAIRS, p, 2), false);
 		w.getBlockAt(add(p, l, 0, 1, -1)).setTypeIdAndData(Material.WOOD.getId(), (byte) 5, false);
 	}
@@ -612,13 +615,13 @@ public class ModelBuilder {
 		w.getBlockAt(add(p, l, 0, 1, 0)).setTypeIdAndData(Material.WOOD.getId(), (byte) 5, false);
 		w.getBlockAt(add(p, l, 0, 1, 0)).setTypeIdAndData(Material.DARK_OAK_STAIRS.getId(), (byte) correct(Material.DARK_OAK_STAIRS, p, 3), false);
 		w.getBlockAt(add(p, l, 0, 0, -1)).setType(Material.IRON_FENCE);
-		w.getBlockAt(add(p, l, 0, 0, -1)).setTypeIdAndData(Material.LOG.getId(), (byte) correct(Material.LOG, p, 9), false);
+		w.getBlockAt(add(p, l, 0, 0, -1)).setTypeIdAndData(Material.LOG_2.getId(), (byte) correct(Material.LOG_2, p, 9), false);
 		w.getBlockAt(add(p, l, 0, 1, 0)).setTypeIdAndData(Material.DARK_OAK_STAIRS.getId(), (byte) correct(Material.DARK_OAK_STAIRS, p, 3), false);
-		w.getBlockAt(add(p, l, 0, 0, -1)).setTypeIdAndData(Material.LOG.getId(), (byte) correct(Material.LOG, p, 1), false);
+		w.getBlockAt(add(p, l, 0, 0, -1)).setTypeIdAndData(Material.LOG_2.getId(), (byte) correct(Material.LOG_2, p, 1), false);
 		w.getBlockAt(add(p, l, 0, 0, -1)).setTypeIdAndData(Material.DARK_OAK_STAIRS.getId(), (byte) correct(Material.DARK_OAK_STAIRS, p, 7), false);
-		w.getBlockAt(add(p, l, 0, -1, 0)).setTypeIdAndData(Material.LOG.getId(), (byte) correct(Material.LOG, p, 9), false);
+		w.getBlockAt(add(p, l, 0, -1, 0)).setTypeIdAndData(Material.LOG_2.getId(), (byte) correct(Material.LOG_2, p, 9), false);
 		w.getBlockAt(add(p, l, 0, -1, 0)).setTypeIdAndData(Material.DARK_OAK_STAIRS.getId(), (byte) correct(Material.DARK_OAK_STAIRS, p, 6), false);
-		w.getBlockAt(add(p, l, 0, 0, 1)).setTypeIdAndData(Material.LOG.getId(), (byte) correct(Material.LOG, p, 1), false);
+		w.getBlockAt(add(p, l, 0, 0, 1)).setTypeIdAndData(Material.LOG_2.getId(), (byte) correct(Material.LOG_2, p, 1), false);
 		w.getBlockAt(add(p, l, 0, 0, 1)).setTypeIdAndData(Material.DARK_OAK_STAIRS.getId(), (byte) correct(Material.DARK_OAK_STAIRS, p, 2), false);
 		w.getBlockAt(add(p, l, 0, 1, -1)).setTypeIdAndData(Material.WOOD.getId(), (byte) 5, false);
 		
@@ -693,13 +696,13 @@ public class ModelBuilder {
 		w.getBlockAt(add(p, l, 0, 1, 0)).setTypeIdAndData(Material.WOOD.getId(), (byte) 5, false);
 		w.getBlockAt(add(p, l, 0, 1, 0)).setTypeIdAndData(Material.DARK_OAK_STAIRS.getId(), (byte) correct(Material.DARK_OAK_STAIRS, p, 3), false);
 		w.getBlockAt(add(p, l, 0, 0, -1)).setType(Material.IRON_FENCE);
-		w.getBlockAt(add(p, l, 0, 0, -1)).setTypeIdAndData(Material.LOG.getId(), (byte) correct(Material.LOG, p, 9), false);
+		w.getBlockAt(add(p, l, 0, 0, -1)).setTypeIdAndData(Material.LOG_2.getId(), (byte) correct(Material.LOG_2, p, 9), false);
 		w.getBlockAt(add(p, l, 0, 1, 0)).setTypeIdAndData(Material.DARK_OAK_STAIRS.getId(), (byte) correct(Material.DARK_OAK_STAIRS, p, 3), false);
-		w.getBlockAt(add(p, l, 0, 0, -1)).setTypeIdAndData(Material.LOG.getId(), (byte) correct(Material.LOG, p, 1), false);
+		w.getBlockAt(add(p, l, 0, 0, -1)).setTypeIdAndData(Material.LOG_2.getId(), (byte) correct(Material.LOG_2, p, 1), false);
 		w.getBlockAt(add(p, l, 0, 0, -1)).setTypeIdAndData(Material.DARK_OAK_STAIRS.getId(), (byte) correct(Material.DARK_OAK_STAIRS, p, 7), false);
-		w.getBlockAt(add(p, l, 0, -1, 0)).setTypeIdAndData(Material.LOG.getId(), (byte) correct(Material.LOG, p, 9), false);
+		w.getBlockAt(add(p, l, 0, -1, 0)).setTypeIdAndData(Material.LOG_2.getId(), (byte) correct(Material.LOG_2, p, 9), false);
 		w.getBlockAt(add(p, l, 0, -1, 0)).setTypeIdAndData(Material.DARK_OAK_STAIRS.getId(), (byte) correct(Material.DARK_OAK_STAIRS, p, 6), false);
-		w.getBlockAt(add(p, l, 0, 0, 1)).setTypeIdAndData(Material.LOG.getId(), (byte) correct(Material.LOG, p, 1), false);
+		w.getBlockAt(add(p, l, 0, 0, 1)).setTypeIdAndData(Material.LOG_2.getId(), (byte) correct(Material.LOG_2, p, 1), false);
 		w.getBlockAt(add(p, l, 0, 0, 1)).setTypeIdAndData(Material.DARK_OAK_STAIRS.getId(), (byte) correct(Material.DARK_OAK_STAIRS, p, 2), false);
 		w.getBlockAt(add(p, l, 0, 1, -1)).setTypeIdAndData(Material.WOOD.getId(), (byte) 5, false);
 		
@@ -778,13 +781,13 @@ public class ModelBuilder {
 		w.getBlockAt(add(p, l, 0, 0, -1)).setTypeIdAndData(Material.DARK_OAK_STAIRS.getId(), (byte) correct(Material.DARK_OAK_STAIRS, p, 6), false);
 		w.getBlockAt(add(p, l, 0, 1, 0)).setTypeIdAndData(Material.DARK_OAK_STAIRS.getId(), (byte) correct(Material.DARK_OAK_STAIRS, p, 3), false);
 		w.getBlockAt(add(p, l, 0, 0, -1)).setType(Material.IRON_FENCE);
-		w.getBlockAt(add(p, l, 0, 0, -1)).setTypeIdAndData(Material.LOG.getId(), (byte) correct(Material.LOG, p, 9), false);
+		w.getBlockAt(add(p, l, 0, 0, -1)).setTypeIdAndData(Material.LOG_2.getId(), (byte) correct(Material.LOG_2, p, 9), false);
 		w.getBlockAt(add(p, l, 0, 1, 0)).setTypeIdAndData(Material.DARK_OAK_STAIRS.getId(), (byte) correct(Material.DARK_OAK_STAIRS, p, 3), false);
-		w.getBlockAt(add(p, l, 0, 0, -1)).setTypeIdAndData(Material.LOG.getId(), (byte) correct(Material.LOG, p, 1), false);
+		w.getBlockAt(add(p, l, 0, 0, -1)).setTypeIdAndData(Material.LOG_2.getId(), (byte) correct(Material.LOG_2, p, 1), false);
 		w.getBlockAt(add(p, l, 0, 0, -1)).setTypeIdAndData(Material.DARK_OAK_STAIRS.getId(), (byte) correct(Material.DARK_OAK_STAIRS, p, 7), false);
-		w.getBlockAt(add(p, l, 0, -1, 0)).setTypeIdAndData(Material.LOG.getId(), (byte) correct(Material.LOG, p, 9), false);
+		w.getBlockAt(add(p, l, 0, -1, 0)).setTypeIdAndData(Material.LOG_2.getId(), (byte) correct(Material.LOG_2, p, 9), false);
 		w.getBlockAt(add(p, l, 0, -1, 0)).setTypeIdAndData(Material.DARK_OAK_STAIRS.getId(), (byte) correct(Material.DARK_OAK_STAIRS, p, 6), false);
-		w.getBlockAt(add(p, l, 0, 0, 1)).setTypeIdAndData(Material.LOG.getId(), (byte) correct(Material.LOG, p, 1), false);
+		w.getBlockAt(add(p, l, 0, 0, 1)).setTypeIdAndData(Material.LOG_2.getId(), (byte) correct(Material.LOG_2, p, 1), false);
 		w.getBlockAt(add(p, l, 0, 0, 1)).setTypeIdAndData(Material.DARK_OAK_STAIRS.getId(), (byte) correct(Material.DARK_OAK_STAIRS, p, 2), false);
 		w.getBlockAt(add(p, l, 0, 1, -1)).setTypeIdAndData(Material.WOOD.getId(), (byte) 5, false);
 	}

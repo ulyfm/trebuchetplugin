@@ -30,7 +30,7 @@ public class LaunchAnimator {
 	public LaunchAnimator(Trebuchet p, MapTrebuchet m){
 		mt = m;
 		plugin = p;
-		plugin.getServer().getScheduler().scheduleAsyncDelayedTask(plugin, new Runnable(){
+		plugin.getServer().getScheduler().scheduleSyncDelayedTask(plugin, new Runnable(){
 
 			@Override
 			public void run() {
@@ -38,23 +38,22 @@ public class LaunchAnimator {
 			}
 			
 		}, 4l);
-		plugin.getServer().getScheduler().scheduleAsyncDelayedTask(plugin, new Runnable(){
+		plugin.getServer().getScheduler().scheduleSyncDelayedTask(plugin, new Runnable(){
 			@Override
 			public void run() {
-				
 				plugin.builder.buildMid(mt, ModelBuilder.int2face(mt.getT()));
-				plugin.getServer().getScheduler().scheduleAsyncDelayedTask(plugin, new Runnable(){
+				plugin.getServer().getScheduler().scheduleSyncDelayedTask(plugin, new Runnable(){
 
 					@Override
 					public void run() {
-						mt.getBase().getWorld().playSound(mt.getBase().getLocation(), Sound.IRONGOLEM_DEATH, 1f, 1f);
+						mt.getBase().getWorld().playSound(mt.getBase().getLocation(), Sound.GHAST_FIREBALL, 1f, 0.5f);
 						plugin.builder.buildLaunching(mt, ModelBuilder.int2face(mt.getT()));
 						FallingBlock fb = mt.getBase().getWorld().spawnFallingBlock(ModelBuilder.add(ModelBuilder.int2face(mt.getT()), mt.getBase().getLocation().clone(), 0, -7, 18), Material.STONE, (byte) 6);
 						double yval = Math.sqrt(Config.TREBUCHET_POWER) * Math.cos(Math.toRadians(mt.getU()));
 						double zval = yval * Math.tan(Math.toRadians(mt.getU()));
 						fb.setVelocity(ModelBuilder.vectorCorrect(mt.getT(), Math.tan(Math.toRadians(mt.getL())), yval, zval));
 						fb.setMetadata("us.noop.trb.stone", new FixedMetadataValue(plugin, "yes"));
-						plugin.getServer().getScheduler().scheduleAsyncDelayedTask(plugin, new Runnable(){
+						plugin.getServer().getScheduler().scheduleSyncDelayedTask(plugin, new Runnable(){
 
 							@Override
 							public void run() {
@@ -62,7 +61,7 @@ public class LaunchAnimator {
 							}
 							
 						}, 16l);
-						plugin.getServer().getScheduler().scheduleAsyncDelayedTask(plugin, new Runnable(){
+						plugin.getServer().getScheduler().scheduleSyncDelayedTask(plugin, new Runnable(){
 
 							@Override
 							public void run() {
@@ -70,7 +69,7 @@ public class LaunchAnimator {
 							}
 							
 						}, Config.TREBUCHET_PARTIAL_RELOAD_TIME);
-						plugin.getServer().getScheduler().scheduleAsyncDelayedTask(plugin, new Runnable(){
+						plugin.getServer().getScheduler().scheduleSyncDelayedTask(plugin, new Runnable(){
 
 							@Override
 							public void run() {

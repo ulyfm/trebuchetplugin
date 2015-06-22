@@ -6,7 +6,6 @@ import java.io.IOException;
 import java.io.PrintStream;
 import java.util.ArrayList;
 import java.util.Scanner;
-import java.util.Set;
 
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
@@ -122,7 +121,7 @@ public class Trebuchet extends JavaPlugin {
 		if(label.equalsIgnoreCase("trbcreate")){
 			Player p = (Player) sender;
 			if(!p.isOp()) return true;
-			Block b = p.getTargetBlock((Set<Material>) null, 2);
+			Block b = p.getTargetBlock(null, 2);
 			if(b == null){
 				p.sendMessage("OUTSIDE OF TREBUCHET BASE BLOCK RANGE");
 				return true;
@@ -134,7 +133,7 @@ public class Trebuchet extends JavaPlugin {
 		}else if(label.equalsIgnoreCase("trbdestroy")){
 			Player p = (Player) sender;
 			if(!p.isOp()) return true;
-			Block b = p.getTargetBlock((Set<Material>) null, 2);
+			Block b = p.getTargetBlock(null, 2);
 			if(b == null){
 				p.sendMessage("OUTSIDE OF TREBUCHET BASE BLOCK RANGE");
 				return true;
@@ -146,7 +145,7 @@ public class Trebuchet extends JavaPlugin {
 		}else if(label.equalsIgnoreCase("dumpdata")){
 			Player p = (Player) sender;
 			if(!p.isOp()) return true;
-			Block b = p.getTargetBlock((Set<Material>) null, 10);
+			Block b = p.getTargetBlock(null, 10);
 			if(b == null){
 				p.sendMessage("OUTSIDE OF TREBUCHET BASE BLOCK RANGE");
 				return true;
