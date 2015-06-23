@@ -461,6 +461,7 @@ public class ModelBuilder {
 		World w = mp.getBase().getWorld();
 		Location l = mp.getBase().getLocation().clone();
 		w.getBlockAt(add(p, l, 0, -2, 1)).setTypeIdAndData(Material.STONE.getId(), (byte) 6, false);
+		w.getBlockAt(add(p, l, -1, -4, 0)).setTypeIdAndData(Material.LEVER.getId(), (byte) correct(Material.LEVER, p, 13), false);
 	}
 	
 	/**
@@ -800,4 +801,12 @@ public class ModelBuilder {
 			trb.manager.remove(baseBlock.getWorld(), baseBlock);
 			player.sendMessage("TREBUCHET AT " + baseBlock.getLocation().toString() + " HAS BEEN DESTROYED IF IT EXISTED IN THE FIRST PLACE");
 		}
+
+	@SuppressWarnings("deprecation")
+	public void toggleLever(MapTrebuchet mt, BlockFace p) {
+		World w = mt.getBase().getWorld();
+		Location l = mt.getBase().getLocation().clone();
+		w.getBlockAt(add(p, l, -1, -6, 1)).setTypeIdAndData(Material.LEVER.getId(), (byte) correct(Material.LEVER, p, 5), false);
+		
 	}
+}

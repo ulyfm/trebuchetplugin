@@ -35,6 +35,7 @@ public class LaunchAnimator {
 			@Override
 			public void run() {
 				mt.getBase().getWorld().playSound(mt.getBase().getLocation(), Sound.ZOMBIE_WOODBREAK, 0.3f, 0.5f);
+				plugin.builder.toggleLever(mt, ModelBuilder.int2face(mt.getT()));
 			}
 			
 		}, 4l);

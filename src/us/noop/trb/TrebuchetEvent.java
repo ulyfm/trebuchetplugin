@@ -85,6 +85,7 @@ public class TrebuchetEvent implements Listener{
 					return;
 				}
 				if(trebuchet.isReloading()){
+					e.setCancelled(true);
 					e.getPlayer().sendMessage("This trebuchet is reloading.");
 					return;
 				}
